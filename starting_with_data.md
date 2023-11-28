@@ -1,8 +1,13 @@
-Question 1: 
+Question 1: Find the highest number of orders placed by each visitor:
 
-SQL Queries:
+SQL Queries: SELECT full_visitorid, COUNT(sku) AS order_count
+             FROM products p
+             JOIN all_sessions als ON p.sku = als.productsku
+             GROUP by full_visitorid
+             ORDER BY order_count DESC
+             LIMIT 1
 
-Answer: 
+Answer: 9
 
 
 
