@@ -63,3 +63,12 @@ SQL Queries: SELECT DISTINCT als.full_visitorid,
              GROUP BY als.full_visitorid
 
 Answer:
+"0000639845445148063" ,	"Low Buyer"
+"0000702913088027926" ,	"Low Buyer"
+"0001436786657417059" ,	"Low Buyer"
+"0001527863526384268" , "Low Buyer"
+"0001611849527956932" ,	"Low Buyer"
+"0002313459690268715" ,	"Low Buyer"
+"0003494484836572385" ,	"Low Buyer"
+"0003520120824829275" ,	"Low Buyer"
+etc...
