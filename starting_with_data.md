@@ -1,4 +1,4 @@
-Question 1: Find the highest number of orders placed by each visitor:
+Question 1: Find the highest number of orders placed by each visitor.
 
 SQL Queries: SELECT full_visitorid, COUNT(sku) AS order_count
              FROM products p
@@ -11,32 +11,55 @@ Answer: 9
 
 
 
-Question 2: 
-
-SQL Queries:
-
-Answer:
+Question 2: Identify products that are out of stock.
 
 
+SQL Queries: SELECT DISTINCT v2product_name,stock_level 
+             FROM products p
+             JOIN all_sessions als ON p.sku = als.productsku
+             GROUP BY v2product_name, stock_level
+             HAVING stock_level = 0
 
-Question 3: 
-
-SQL Queries:
-
-Answer:
+Answer: 96 products are out of stock
 
 
 
-Question 4: 
+Question 3: Find the number of orders placed by each visitor in 2017.
 
-SQL Queries:
+SQL Queries: SELECT full_visitorid, COUNT(sku) AS order_count
+             FROM products p
+             JOIN all_sessions als ON p.sku = als.productsku
+             WHERE EXTRACT(YEAR FROM date) = 2017 
+             GROUP by full_visitorid
+             ORDER BY order_count DESC
 
-Answer:
+Answer: 7140 orders were placed in 2017.
 
 
 
-Question 5: 
+Question 4: Identify the busiest month in terms of ordered quantity.
 
-SQL Queries:
+SQL Queries: SELECT EXTRACT(MONTH FROM date) AS month, COUNT(ordered_quantity) AS order_count
+             FROM products p
+             JOIN all_sessions als ON p.sku = als.productsku
+             GROUP BY month
+             ORDER BY order_count DESC
+             LIMIT 1
+
+Answer: The busiest month is August with 1602 orders
+
+
+
+Question 5: Categorize visitors based on total spending.
+
+SQL Queries: SELECT DISTINCT als.full_visitorid,
+             CASE 
+	              WHEN SUM((unit_price/1000000) * units_sold) > 4500 THEN 'Big Buyer'
+	              WHEN SUM((unit_price/1000000) * units_sold) > 1500 THEN 'Mid Buyer'
+	              ELSE 'Low Buyer'
+             END AS spending_class
+             FROM all_sessions als
+             LEFT JOIN analytics a ON als.full_visitorid = a.full_visitorid
+             GROUP BY als.full_visitorid
 
 Answer:
