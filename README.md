@@ -32,7 +32,8 @@ I was able to derive meaningful insights from the data like;
     	WHEN SUM((unit_price/1000000) * units_sold) > 1500 THEN 'Mid Buyer'
 	    ELSE 'Low Buyer'
 6. Mountain View city in the United State had the highest transaction revenue.
-7. Carried out a Referential Integrity check between all_sessions table and products table using sku(productsku), which showed that was a valid relationship between both tables.
+7. United state generated the highest revenue with 114833 followed by Canada with 485.
+8. Carried out a Referential Integrity check between all_sessions table and products table using sku(productsku), which showed that was a valid relationship between both tables.
 
 
 ## Challenges 
