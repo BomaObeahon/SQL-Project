@@ -14,13 +14,17 @@ My goal was to build a framework for managing data quality and improve the data 
  Step 4 was to study each table.
  Step 5 was to model the data by creating a table called the visitor table,having only the full_visitorid to establish a relationship between the analytics table and the all_sessions table.
  Step 6 was to link tables using the primary key and foreign key.
- Step 7 was to create queries to create insights while cleaning.
+ Step 7 was to create queries to derive insights while cleaning the data to remove duplicates,nulls values etc.
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 I was able to derive meaningful insights from the data like;
-1. The busiest month in terms of ordered quantity by the visitors. This was done by first merging 2 tables(all_sessions and products), grouping by months,extracting the month from the date column and ordering by the month.
-2. Identify products that are out of stock. This was done by joining all_sessions table and products table,grouped by the product name and stock level,then selecting the product name and stock level where the stock level was zero.
+1. The busiest month in terms of ordered quantity by the visitors, which was the month of August with 1602. This was done by first merging 2 tables(all_sessions and products), grouping by months,extracting the month from the date column and ordering by the month.
+2. Identify products that are out of stock, which had 96 products not in stock. This was done by joining all_sessions table and products table,grouped by the product name and stock level,then selecting the product name and stock level where the stock level was zero.
+3. I was able to find the number of orders placed by each visitor in 2017,which was 7140 orders.
+4. I waas able to categorize visitors based on  their total spending.
+5. Mountain View city in the United State had the highest transaction revenue.
+
 
 ## Challenges 
 
