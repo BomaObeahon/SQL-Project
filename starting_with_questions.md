@@ -70,17 +70,12 @@ Answer: Yes there is pattern.
 
 
 SQL Queries:
-WITH tot_order AS (
+
 SELECT name, country, SUM(ordered_quantity) AS total_order
 FROM products p
 JOIN all_sessions als on p.sku = als.productsku
 GROUP BY name, country
-)
-
-SELECT country, name, MAX(total_order) AS maximum
-FROM tot_order
-GROUP BY name, country
-ORDER BY maximum DESC
+ORDER BY total_order DESC
 
 
 
