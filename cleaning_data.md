@@ -1,7 +1,7 @@
 What issues will you address by cleaning the data?
 
-Duplicated rows and columns
-Inaccurate and missing values.
+1. Duplicated rows and columns.
+2. Inaccurate and missing values.
 
 
 
