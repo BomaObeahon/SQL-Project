@@ -71,16 +71,16 @@ Answer: Yes there is pattern.
 
 SQL Queries:
 WITH tot_order AS (
-SELECT name, country, SUM(ordered_quantity)as total_order
-from products p
-join all_sessions als on p.sku = als.productsku
+SELECT name, country, SUM(ordered_quantity) AS total_order
+FROM products p
+JOIN all_sessions als on p.sku = als.productsku
 GROUP BY name, country
 )
 
-SELECT country, name, max(total_order)
-from tot_order
-group by name, country
-order by max desc
+SELECT country, name, MAX(total_order)
+FROM tot_order
+GROUP BY name, country
+ORDER BY MAX DESC
 
 
 
