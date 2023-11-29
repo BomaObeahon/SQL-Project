@@ -12,7 +12,11 @@ My goal was to build a framework for managing data quality and improve the data 
  Step 2 was to create various tables on the csv files that was made available.
  Step 3 was to import the files into the created tables.
  Step 4 was to study each table.
- Step 5 was to model the data by creating a table called the visitor table,having only the full_visitorid to establish a relationship between the analytics table and the all_sessions table.
+ Step 5 was to model the data by creating a table called the visitor table,having only the full_visitorid to establish a relationship between the analytics table and the all_sessions table. This was done so as not to alter the already exisiting tables.
+-- CREATE TABLE visitor AS
+-- SELECT DISTINCT full_visitorid
+-- FROM all_sessions
+
  Step 6 was to link tables using the primary key and foreign key.
  Step 7 was to create queries to derive insights while cleaning the data to remove duplicates,nulls values etc.
 
