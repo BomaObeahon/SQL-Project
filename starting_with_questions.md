@@ -7,7 +7,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 SQL Queries: SELECT country, city, ROUND((SUM(revenue)/1000000),0) AS total_revenue
              FROM analytics a
              LEFT JOIN all_sessions als ON a.full_visitorid = als.full_visitorid
-             WHERE als.time_onsite IS NOT NULL AND city NOT LIKE '%not%'
+             WHERE city NOT LIKE '%not%'
              GROUP BY country, city
              HAVING SUM(revenue) IS NOT NULL
              ORDER BY total_revenue DESC
@@ -16,7 +16,7 @@ SQL Queries: SELECT country, city, ROUND((SUM(revenue)/1000000),0) AS total_reve
 
 
 
-Answer: "United States",	"Mountain View"	, 9869
+Answer: "United States",	"Mountain View"	, 10549
 
 
 
