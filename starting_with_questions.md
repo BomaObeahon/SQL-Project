@@ -5,8 +5,8 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries: SELECT country, city, ROUND((SUM(revenue)/1000000),0) AS total_revenue
-             FROM all_sessions als
-             LEFT JOIN analytics a ON als.full_visitorid = a.full_visitorid
+             FROM analytics a
+             LEFT JOIN all_sessions als ON a.full_visitorid = als.full_visitorid
              WHERE als.time_onsite IS NOT NULL AND city NOT LIKE '%not%'
              GROUP BY country, city
              HAVING SUM(revenue) IS NOT NULL
