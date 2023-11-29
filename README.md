@@ -44,4 +44,4 @@ I was able to derive meaningful insights from the data like;
 
 ## Future Goals
 (what would you do if you had more time?)
-If given more time i'll do further analysis of the data.
+If given more time i would try my hands on complex queries to improve my understanding on sql .
