@@ -22,8 +22,9 @@ I was able to derive meaningful insights from the data like;
 1. The busiest month in terms of ordered quantity by the visitors, which was the month of August with 1602. This was done by first merging 2 tables(all_sessions and products), grouping by months,extracting the month from the date column and ordering by the month.
 2. Identify products that are out of stock, which had 96 products not in stock. This was done by joining all_sessions table and products table,grouped by the product name and stock level,then selecting the product name and stock level where the stock level was zero.
 3. I was able to find the number of orders placed by each visitor in 2017,which was 7140 orders.
-4. I waas able to categorize visitors based on  their total spending.
+4. I was able to categorize visitors based on  their total spending.
 5. Mountain View city in the United State had the highest transaction revenue.
+6. Carried out a Referential Integrity check between all_sessions table and products table using sku(productsku), which showed that was a valid relationship between both tables.
 
 
 ## Challenges 
