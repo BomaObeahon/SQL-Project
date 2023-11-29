@@ -99,10 +99,22 @@ Answer:
 **Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
+SELECT country, SUM((revenue)/1000000) AS summ_revenue
+FROM analytics a  
+LEFT JOIN all_sessions als  ON a.full_visitorid = als.full_visitorid
+WHERE country IS NOT NULL
+GROUP BY country
+HAVING SUM(revenue) IS NOT NULL
+ORDER BY summ_revenue DESC
 
 
 
 Answer:
+"United States"	, 114833
+"Canada", 	485
+"Germany", 	69
+"Japan", 29
+"Switzerland", 16
 
 
 
