@@ -77,10 +77,10 @@ JOIN all_sessions als on p.sku = als.productsku
 GROUP BY name, country
 )
 
-SELECT country, name, MAX(total_order)
+SELECT country, name, MAX(total_order) AS maximum
 FROM tot_order
 GROUP BY name, country
-ORDER BY MAX DESC
+ORDER BY maximum DESC
 
 
 
