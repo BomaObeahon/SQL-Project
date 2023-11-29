@@ -12,9 +12,9 @@ My goal was to build a framework for managing data quality and improve the data 
  Step 2 was to create various tables on the csv files that was made available.
  Step 3 was to import the files into the created tables.
  Step 4 was to study each table.
- Step 5 was to link tables using the primary key and foreign key.
- Step 6 was data cleaning and normalization.
- Step 7 was to create queries to create insights.
+ Step 5 was to model the data by creating a table called the visitor table,having only the full_visitorid to establish a relationship between the analytics table and the all_sessions table.
+ Step 6 was to link tables using the primary key and foreign key.
+ Step 7 was to create queries to create insights while cleaning.
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
